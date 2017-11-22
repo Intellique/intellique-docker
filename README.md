@@ -35,7 +35,7 @@ Here is how this is all architectured.
 ## Deploy
 
 1. Install [docker](https://docs.docker.com/engine/installation/) and [docker-compose](https://docs.docker.com/compose/install/). Minimal required version are Docker v1.10.0 and docker-compose v1.6.0. We tested with Docker 17.05 and docker-compose v1.8.0.
-2. get the docker-compose.yml file
+2. get the [docker-compose.yml](https://raw.githubusercontent.com/Intellique/intellique-docker/master/docker-compose.yml) file
 3. run docker-compose:
 
     `docker-compose up -d`
@@ -44,7 +44,7 @@ Here is how this is all architectured.
 
 The system is pre-configured with one user account, "storiq", using the password "spider77".
 
-Go to http://<docker host IP>/nextcloud (or install and configure a nextcloud client) and connect as storiq.
+Go to `http://<docker host IP>/nextcloud` (or install and configure a nextcloud client) and connect as storiq.
 Drop files into the nextcloud volume.
 
 ### Archiving
@@ -54,7 +54,7 @@ Wait for at most 15 minutes; the files will disappear from *to_archive*. They've
 
 ### Restoring
 
-To restore files, go to http://<docker host IP>/intellique and connect as storiq.
+To restore files, go to `http://<docker host IP>/intellique` and connect as storiq.
 The left pane allows you to switch between archives (an archive may contains many files), files, media (physical storage locations, may contain many archives), User account, and for authorized users, Administration.
 
 Browse the archives or files, or search for archives or files. Click on the *+* sign to display more information. To restore an archive or file, click on the "Restore this archive" or "Restore this file" button.

@@ -3,7 +3,7 @@ version: "2.0"
 services:
         api:
                 container_name: api
-				depends_on:
+                depends_on:
                         - db
                 hostname: api
                 image: intellique/api:testing
