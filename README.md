@@ -74,7 +74,7 @@ To create an API key, connect to the docker image running the daemon:
 
     docker exec -i -t daemon /bin/bash
 	
-Then use the storiqonectl command this way
+Then use the *storiqonectl* command this way:
 
     storiqonectl api --create <Your App Name>
 	
