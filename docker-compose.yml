@@ -2,7 +2,8 @@ version: "2.0"
 
 services:
         api:
-                depends_on:
+                container_name: api
+				depends_on:
                         - db
                 hostname: api
                 image: intellique/api:testing
@@ -11,6 +12,7 @@ services:
                         - data-vol:/var/www/nextcloud/data
 
         daemon:
+                container_name: daemon
                 depends_on:
                         - db
                 hostname: daemon
@@ -19,10 +21,12 @@ services:
                         - data-vol:/var/www/nextcloud/data
 
         db:
+                container_name: db
                 hostname: db
                 image: intellique/database:testing
 
         nextcloud:
+                container_name: nextcloud
                 depends_on:
                         - db
                 image: intellique/nextcloud:testing
@@ -31,6 +35,7 @@ services:
                         - data-vol:/var/www/nextcloud/data
 
         proxy:
+                container_name: proxy
                 depends_on:
                         - api
                         - nextcloud
@@ -40,6 +45,7 @@ services:
                         - "80:80"
 
         webui:
+                container_name: webui
                 depends_on:
                         - api
                 hostname: webui
