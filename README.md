@@ -65,7 +65,7 @@ Restored data appears in the Nextcloud volume in the *restored* folder.
 
 **Don't create users from the NextCloud interface**. Create users and change their passwords from the *Intellique* Web UI instead; this will also automatically create the corresponding user account in NextCloud.
 
-Users created from the same *master account* have their own NextCloud space; but they all share the same archival pool. Therefore they can restore archives made by others.
+Users created from the same *master account* have their own NextCloud space; but they all share the same archival pool. Therefore they can restore archives made by other users from the same group.
 
 ## Using the application through the API
 
@@ -74,7 +74,7 @@ To create an API key, connect to the docker image running the daemon:
 
     docker exec -i -t daemon /bin/bash
 	
-Then use the storiqonectl command this way
+Then use the *storiqonectl* command this way:
 
     storiqonectl api --create <Your App Name>
 	
