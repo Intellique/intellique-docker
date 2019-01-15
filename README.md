@@ -69,7 +69,7 @@ Users created from the same *master account* have their own NextCloud space; but
 
 ## Using the application through the API
 
-See the [API documentation](https://github.com/Intellique/api). It is recommended that you create a new API key for each application that will use it, so that proper information is logged.
+See the [API documentation](https://github.com/Intellique/api). It is recommended that you create a new API key for each application that will use it, to help identify clearly what each application is doing in the logs.
 To create an API key, connect to the docker image running the daemon:
 
     docker exec -i -t daemon /bin/bash
@@ -78,7 +78,7 @@ Then use the storiqonectl command this way
 
     storiqonectl api --create <Your App Name>
 	
-Note carefully the API key returned. You can then use this API key to send request, for instance:
+Note carefully the API key returned. You can then use this API key to send requests, for instance:
 
     # authenticate with the API
 	curl -v -k -X POST --data '{"login":"admin","password":"spider77","apikey":"<uuid>"'}' \
