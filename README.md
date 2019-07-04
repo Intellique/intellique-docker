@@ -21,7 +21,7 @@ The full appplication uses 6 docker images:
    * the daemon is the program actually moving data around. Its source code is available [here](https://github.com/Intellique/daemon) 
 
  * [Intellique Web UI](https://hub.docker.com/r/intellique/webui/)
-   * this is a simple web interface that consumes the API. Its source code is available [here](https://github.com/Intellique/webui) 
+   * this is a simple web interface that consumes the API. Its source code is available [here](https://github.com/Intellique/intellique-ui) 
 
  * [HA Proxy](https://hub.docker.com/r/intellique/haproxy/)
    * this one manage http routing between NextCloud, the Web UI and the API.
